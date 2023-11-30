@@ -2,30 +2,35 @@
   <p class="title">Sign Up</p>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
-  </div>
+    <div class="field">
+      <%= f.label :full_name %><br />
+      <%= f.text_field :full_name, autofocus: true, class: "input" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "input" %>
-  </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autocomplete: "email", class: "input" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input" %>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: "input" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up", class: "form-btn" %>
-  </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class: "form-btn" %>
+    </div>
   <% end %>
+
   <p class="page-link">
-    Already have an account?<span class="sign-up-link"><%= link_to "Sign in",  new_user_session_path %></span>
+    Already have an account?<span class="sign-up-link"><%= link_to "Sign in", new_user_session_path %></span>
   </p>
 </div>
-
