@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
-  before_action :authenticate_user!, except: [:public]
+  before_action :authenticate_user!
 
   def index
     @groups = Group.where(user_id: current_user.id)
@@ -36,6 +36,13 @@ class GroupsController < ApplicationController
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @group.destroy
+    respond_to do |format|
+      format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
     end
   end
 
