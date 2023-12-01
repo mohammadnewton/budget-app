@@ -1,15 +1,448 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.splash-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #3778c2;
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+}
+
+.animated-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: transformImage 20s infinite linear;
+}
+
+.splash-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.splash-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+.splash-buttons a {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.splash-buttons a:first-child {
+  background-color: #3778c2;
+}
+
+.splash-buttons a:last-child {
+  background-color: #5fb523;
+}
+
+.splash-buttons a:hover {
+  background-color: #205580;
+}
+
+@keyframes transformImage {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.form-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+}
+
+.title {
+  text-align: center;
+  margin: 10px 0 30px 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  outline: 0 !important;
+  box-sizing: border-box;
+  padding: 12px 15px;
+}
+
+.page-link {
+  margin-top: 20px;
+  text-align: center;
+  color: #747474;
+  font-size: 16px;
+}
+
+.page-link a {
+  font-size: 16px;
+}
+
+.page-link a:hover {
+  color: #000;
+}
+
+.page-link-label {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.page-link-label:hover {
+  color: #000;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border-radius: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.form-btn:active {
+  box-shadow: none;
+}
+
+.sign-up-label {
+  margin: 0;
+  font-size: 10px;
+  color: #747474;
+}
+
+.sign-up-link {
+  margin-left: 1px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-decoration-color: teal;
+  color: teal;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.col {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding-top: 14px;
+  box-shadow: 0 5px 20px #c5cfdb;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  padding: 13px;
+  margin-bottom: 30px;
+}
+
+.toolbar2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.toolbar2 > * {
+  margin-left: 30px;
+}
+
+.back_btn > img {
+  width: 14%;
+}
+
+.toolbar__groups {
+  padding: 14px;
+  color: #fff;
+}
+
+.flash-notice {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.newgroup {
+  display: grid;
+  place-items: center;
+  background-color: #e2dede;
+  padding: 50px;
+}
+
+.date {
+  padding: 9px;
+}
+
+.bottom {
+  position: relative;
+  bottom: -337px;
+}
+
+.bottom2 {
+  position: relative;
+  bottom: -337px;
+}
+
+.bottom3 {
+  position: relative;
+  bottom: -326px;
+  width: 100%;
+}
+
+.separate {
+  border-bottom: 1px solid;
+  margin-bottom: 15px;
+}
+
+.add-group {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+.add-group a {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.add-group a:hover {
+  background-color: #3778c2;
+}
+
+.newgroup {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.error-messages {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3778c2;
+  border: 1px solid #3778c2;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.toolbar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.toolbar2 img {
+  width: 10%;
+  margin-right: 10px;
+}
+
+.toolbar2 div {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.date {
+  font-style: italic;
+  color: #777;
+}
+
+.flash-notice {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.no-transactions {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .back_btn {
+    margin-right: 5px;
+  }
+}
+
+.separate div {
+  text-align: center;
+}
+
+.separate {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #fffdf4;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.separate div:last-child {
+  font-weight: bold;
+  color: #3498db;
+}
