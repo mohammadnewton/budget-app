@@ -51,6 +51,10 @@
 
 This is a live link to the project website [budget-app](https://bofulo-budget-app.onrender.com/)
 
+<!-- Video Demo Link -->
+
+This is a link to the video walkthrough of the project [budget-app-video](https://www.loom.com/share/2764f491736f4be58710b57720db07a3?sid=3928b8a1-d4d7-43a2-950f-dd4fd630a3a6)
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
