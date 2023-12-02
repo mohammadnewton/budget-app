@@ -20,11 +20,16 @@ m = Module.new do
   end
 
   def cli_arg_version
-    return unless invoked_as_script? # don't want to hijack other binstubs
-    return unless 'update'.start_with?(ARGV.first || ' ') # must be running `bundle update`
-
-    bundler_version = nil
+    return unless invoked_as_script? && 'update'.start_with?(ARGV.first || ' ')
+  
     update_index = nil
+    bundler_version = find_bundler_version(update_index)
+    return bundler_version
+  end
+
+  private
+
+  def find_bundler_version(update_index)
     ARGV.each_with_index do |a, i|
       bundler_version = a if update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
       next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
@@ -34,6 +39,8 @@ m = Module.new do
     end
     bundler_version
   end
+
+  public
 
   def gemfile
     gemfile = ENV.fetch('BUNDLE_GEMFILE', nil)
