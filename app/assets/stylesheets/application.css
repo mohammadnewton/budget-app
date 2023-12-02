@@ -63,6 +63,32 @@ a {
   text-transform: uppercase;
 }
 
+.page-link a {
+  font-size: 16px;
+}
+
+.page-link a:hover {
+  color: #000;
+}
+
+.add-group a {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 20px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.add-group a:hover {
+  background-color: #3778c2;
+}
+
 .splash-buttons a {
   margin: 5px;
   padding: 10px 20px;
@@ -146,14 +172,6 @@ a {
   text-align: center;
   color: #747474;
   font-size: 16px;
-}
-
-.page-link a {
-  font-size: 16px;
-}
-
-.page-link a:hover {
-  color: #000;
 }
 
 .page-link-label {
@@ -282,24 +300,6 @@ a {
   display: grid;
   place-items: center;
   padding: 50px;
-}
-
-.add-group a {
-  width: 100%;
-  padding: 10px 15px;
-  margin: 20px 0;
-  text-align: center;
-  border-radius: 20px;
-  border: 0 !important;
-  outline: 0 !important;
-  background: teal;
-  color: white;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-}
-
-.add-group a:hover {
-  background-color: #3778c2;
 }
 
 .newgroup {
