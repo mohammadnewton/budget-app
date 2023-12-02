@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "GroupsController", type: :request do
+RSpec.describe 'GroupsController', type: :request do
   describe 'GET /index' do
     let(:user) do
       User.create(name: 'John Doe', email: 'john.doe@example.com', password: 'password',
@@ -82,13 +82,13 @@ RSpec.describe "GroupsController", type: :request do
       User.create(name: 'John Doe', email: 'john.doe@example.com', password: 'password',
                   password_confirmation: 'password')
     end
-  
+
     before do
       allow_any_instance_of(GroupsController).to receive(:authenticate_user!).and_return(true)
       allow_any_instance_of(GroupsController).to receive(:current_user).and_return(user)
       post groups_path, params: { group: { name: 'Test Group', icon: 'test_icon.png' } }
     end
-  
+
     it 'returns a successful response' do
       expect(response).to have_http_status(302)
       follow_redirect!
@@ -135,18 +135,18 @@ RSpec.describe "GroupsController", type: :request do
       User.create(name: 'John Doe', email: 'john.doe@example.com', password: 'password',
                   password_confirmation: 'password')
     end
-    let(:group) { Group.create(name: 'Group 1', icon: 'icon.png', user: user) }
-  
+    let(:group) { Group.create(name: 'Group 1', icon: 'icon.png', user:) }
+
     before do
       allow_any_instance_of(GroupsController).to receive(:authenticate_user!).and_return(true)
       allow_any_instance_of(GroupsController).to receive(:current_user).and_return(user)
       delete group_path(group)
     end
-  
+
     it 'returns a redirect response' do
       expect(response).to have_http_status(302)
     end
-  
+
     it 'redirects to the correct path' do
       expect(response).to redirect_to(groups_path)
     end

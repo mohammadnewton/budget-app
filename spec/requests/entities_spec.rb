@@ -22,7 +22,7 @@ RSpec.describe 'EntitiesController', type: :request do
     end
 
     it 'includes the correct placeholder text in the response body' do
-      expect(response.body).to match(/<label.*?>.*?Group.*?<\/label>/i)
+      expect(response.body).to match(%r{<label.*?>.*?Group.*?</label>}i)
     end
   end
 end
