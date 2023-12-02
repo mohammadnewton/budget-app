@@ -47,12 +47,14 @@ a {
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
+  justify-content: center;
   text-align: center;
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
+  background-color: #61B524;
   left: 0;
   right: 0;
-  margin: 0 20px;
+  height: 80px;
 }
 
 .page-link a {
@@ -74,13 +76,14 @@ a {
 }
 
 .splash-buttons a {
-  margin: 5px;
   padding: 10px 20px;
   border: none;
   color: white;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border: 1px solid white;
+  margin: 5px 209px;
 }
 
 .page-link a:hover {
@@ -91,7 +94,7 @@ a {
   background-color: #3778c2;
 }
 
-.splash-buttons a:first-child {
+.splash-button-1 {
   background-color: #3778c2;
 }
 
