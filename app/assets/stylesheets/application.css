@@ -217,13 +217,6 @@ a {
   font-weight: 800;
 }
 
-.col {
-  background-color: #fff;
-  margin-bottom: 15px;
-  padding-top: 14px;
-  box-shadow: 0 5px 20px #c5cfdb;
-}
-
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -255,19 +248,6 @@ a {
   color: #fff;
 }
 
-.flash-notice {
-  background-color: #dff0d8;
-  color: #3c763d;
-  border: 1px solid #d6e9c6;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
-
-.date {
-  padding: 9px;
-}
-
 .bottom {
   position: relative;
   bottom: -337px;
@@ -284,11 +264,6 @@ a {
   width: 100%;
 }
 
-.separate {
-  border-bottom: 1px solid;
-  margin-bottom: 15px;
-}
-
 .add-group {
   display: grid;
   place-items: center;
@@ -301,7 +276,6 @@ a {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
   display: grid;
   place-items: center;
   background-color: #e2dede;
@@ -378,6 +352,10 @@ label {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding-top: 14px;
+  box-shadow: 0 5px 20px #c5cfdb;
 }
 
 .toolbar2 {
@@ -385,6 +363,7 @@ label {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  background-color: #fff;
 }
 
 .toolbar2 img {
@@ -400,6 +379,7 @@ label {
 .date {
   font-style: italic;
   color: #777;
+  padding: 9px;
 }
 
 .flash-notice {
@@ -428,10 +408,11 @@ label {
 }
 
 .separate {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
   background: #fffdf4;
   padding: 15px;
   margin-bottom: 15px;
+  border-bottom: 1px solid;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
