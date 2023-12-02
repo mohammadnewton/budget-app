@@ -1,4 +1,4 @@
-<div class="newgroup">
+<div class="main-container">
   <%= form_with(model: group, class: "group-form") do |form| %>
     <% if group.errors.any? %>
       <div class="error-messages">
@@ -25,7 +25,7 @@
         },
         { class: "form-control" } %>
     </div>
-    <div class="form-field login">
+    <div class="splash-buttons">
       <%= form.submit class: "form-btn" %>
     </div>
   <% end %>

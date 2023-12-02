@@ -129,6 +129,8 @@ If you like this project you can give it a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I would like to give credit to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
 I would like to thank Microverse for giving me all the necessary knowledge I need to make this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

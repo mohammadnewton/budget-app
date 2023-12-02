@@ -11,11 +11,13 @@
   </div>
 <% end %>
 
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-  <% end %>
-</div>
-<div class="add-group">
-  <%= link_to "New group", new_group_path, class: 'register bottom'%>
-</div>
+<section class="main-container">
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <%= render group %>
+    <% end %>
+  </div>
+  <div class="splash-buttons">
+    <%= link_to "New group", new_group_path %>
+  </div>
+</section>
