@@ -67,10 +67,6 @@ a {
   font-size: 16px;
 }
 
-.page-link a:hover {
-  color: #000;
-}
-
 .add-group a {
   width: 100%;
   padding: 10px 15px;
@@ -85,10 +81,6 @@ a {
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
-.add-group a:hover {
-  background-color: #3778c2;
-}
-
 .splash-buttons a {
   margin: 5px;
   padding: 10px 20px;
@@ -96,6 +88,14 @@ a {
   color: white;
   cursor: pointer;
   width: 100%;
+}
+
+.page-link a:hover {
+  color: #000;
+}
+
+.add-group a:hover {
+  background-color: #3778c2;
 }
 
 .splash-buttons a:first-child {
@@ -264,13 +264,6 @@ a {
   border-radius: 4px;
 }
 
-.newgroup {
-  display: grid;
-  place-items: center;
-  background-color: #e2dede;
-  padding: 50px;
-}
-
 .date {
   padding: 9px;
 }
@@ -305,11 +298,14 @@ a {
 .newgroup {
   max-width: 400px;
   margin: auto;
-  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  display: grid;
+  place-items: center;
+  background-color: #e2dede;
+  padding: 50px;
 }
 
 .error-messages {
@@ -369,7 +365,7 @@ label {
 }
 
 .container {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
   max-width: 300px;
   margin: 20px auto;
   padding: 15px;
