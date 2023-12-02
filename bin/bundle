@@ -26,6 +26,12 @@ m = Module.new do
     return unless "update".start_with?(ARGV.first || " ") # must be running `bundle update`
     bundler_version = nil
     update_index = nil
+    find_bundler_version(update_index)
+  end
+
+  private
+
+  def find_bundler_version(update_index)
     ARGV.each_with_index do |a, i|
       if update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
         bundler_version = a
@@ -36,6 +42,8 @@ m = Module.new do
     end
     bundler_version
   end
+
+  public
 
   def gemfile
     gemfile = ENV["BUNDLE_GEMFILE"]
